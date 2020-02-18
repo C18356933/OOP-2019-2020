@@ -12,6 +12,16 @@ public class Cat extends Animal
     {
         return numLives;
     }
+    public void kill()
+    {
+        this.numLives = this.numLives-1;
+
+        if (this.numLives > 0){
+            System.out.println("Ouch");
+        } else {
+            System.out.println("Dead");
+        }
+    }
 
     public void speak()
     {
