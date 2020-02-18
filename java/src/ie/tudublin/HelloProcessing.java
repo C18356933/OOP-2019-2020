@@ -3,7 +3,7 @@ package ie.tudublin;
 import processing.core.PApplet;
 
 public class HelloProcessing extends PApplet
-{	
+{
 	public void settings()
 	{
 		size(500, 500);
@@ -22,19 +22,30 @@ public class HelloProcessing extends PApplet
 		ellipse(100, 200, 50, 150); // cx, cy, w, h
 		fill(0, 255, 0);
 		rect(50, 10, 100, 200); // tlx, tly, w, h
-		triangle(10, 10, 100, 90, 200, 200); // vertices	
-	}	
+		triangle(10, 10, 100, 90, 200, 200); // vertices
+	}
 	*/
 
 	int x = 0; // 4 bytes
-	
+
 	public void draw()
-	{	
-		
-		background(0);
+	{
+		background(255,0,0);
 		noStroke();
-		fill(255);
-		ellipse(x, mouseY, 50, 50);		
-		x ++;
+		
+		fill(255,255,0);
+		ellipse(250,300,400,400);
+		fill(64, 224, 208);
+		triangle(250, 50, 50, 450, 450, 450);
+		fill(170);
+		ellipse(250,250,190,100);
+		fill(0);
+		ellipse(250,250,70,70);
+		if (mouseX > 200 && mouseX < 300) {
+			if (mouseY > 225 && mouseY < 275)
+			fill(170);
+			ellipse(250,250,190,100);
+		}
+		
 	}
 }
