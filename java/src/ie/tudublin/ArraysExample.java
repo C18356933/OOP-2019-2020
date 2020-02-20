@@ -84,40 +84,54 @@ public class ArraysExample extends PApplet
 		}
 	}
 	/*
-		public drawLineGraph()
+	public drawLineGraph()
+	{
+		float border = width * .05f;
+
+		line(border,border,border,height,border);
+
+		for(int ya=0 ; ya<= 150 ; ya+=10)
 		{
-			float border = width * .05f;
+			float x = map(ya,0,150,height-border,border);
+			line(border, y, border- 5,y );
+			text(ya,border/2,y);
 
-			line(border,border,border,height,border);
+		}
 
-			for(int ya=0 ; ya<= 150 ; ya+=10)
-			{
-				float x = map(ya,0,150,height-border,border);
-				line(border, y, border- 5,y );
-				text(ya,border/2,y);
+		line(border,height - border,width - border,height - border);
+		for(int i = 0; i < months.length ; i++)
+		{
+			float x= map(i,0,months.length-1,border,width - border;
+			line(x,height-border,x,height-(border+5));
+			text(months[i],x,height +(border/2);
+		}
 
-			}
+		//finish this
+		for(i=0;i<rainfall.length -1,i++)
+		{
+			float x1=map(i,0,months.length-1,);
+		}
+	}*/
 
-			line(border,height - border,width - border,height - border);
-			for(int i = 0; i < months.length ; i++)
-			{
-				float x= map(i,0,months.length-1,border,width - border;
-				line(x,height-border,x,height-(border+5));
-				text(months[i],x,height +(border/2);
-			}
-
-			//finish this
-			for(i=0;i<rainfall.length -1,i++)
-			{
-				float x1=map(i,0,months.length-1,);
-			}
-		}*/
+	public void drawPieChart()
+	{
+		float lastAngle = 0;
+		float diameter = height/3;
+	  for (int i = 0; i < rainFall.length; i++)
+		{
+			float angle= map(rainFall[i],0,672,0,360);
+	    float gray = map(i, 0, rainFall.length, 0, 255);
+	    fill(gray);
+	    arc(width/2, height/2, diameter, diameter, lastAngle, lastAngle+radians(angle));
+	    lastAngle += radians(angle);
+	  }
+	}
 
 	public void draw()
 	{
 		background(0);
 		colorMode(HSB);
 
-		drawBarChart();
+		drawPieChart();
 	}
 }
