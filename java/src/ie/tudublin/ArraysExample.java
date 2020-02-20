@@ -121,7 +121,7 @@ public class ArraysExample extends PApplet
 		{
 			float angle= map(rainFall[i],0,672,0,360);
 	    float gray = map(i, 0, rainFall.length, 0, 255);
-	    fill(gray);
+	    fill(gray,255,255);
 	    arc(width/2, height/2, diameter, diameter, lastAngle, lastAngle+radians(angle));
 	    lastAngle += radians(angle);
 	  }
