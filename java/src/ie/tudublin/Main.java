@@ -20,19 +20,19 @@ public class Main
 		String[] a = {"MAIN"};
         processing.core.PApplet.runSketch( a, new Loops());
     }
-    
+
     public void bugZap()
 	{
 		String[] a = {"MAIN"};
         processing.core.PApplet.runSketch( a, new BugZap());
     }
-    
+
     public void airSeaBattle()
 	{
 		String[] a = {"MAIN"};
         processing.core.PApplet.runSketch( a, new AirSeaBattle());
     }
-    
+
     public void dogsCats()
     {
         // Polymorphism means
@@ -56,7 +56,7 @@ public class Main
 
         Animal a = new Cat("a");
         Animal b = new Cat("b");
-        
+
         System.out.println(a);
         System.out.println(b);
 
@@ -67,14 +67,14 @@ public class Main
         System.out.println(a);
         System.out.println(b);
 
-        // c c will get printed out because 
+        // c c will get printed out because
         // a & b are object references
 
     }
-    
+
     public static void main(String[] arg)
     {
         Main main = new Main();
-		main.helloArrays();        
+		    main.helloArrays();
     }
 }
